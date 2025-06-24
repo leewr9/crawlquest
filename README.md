@@ -22,7 +22,7 @@ pip install crawlquest
 ### Alternatively, install manually
 
 ```bash
-git clone https://github.com/yourusername/crawlquest.git
+git clone https://github.com/leewr9/crawlquest.git
 cd crawlquest
 pip install .
 ```
