@@ -1,4 +1,6 @@
 # CrawlQuest
+[![Tests Passing](https://github.com/leewr9/crawlquest/actions/workflows/test_core.yml/badge.svg)](https://github.com/leewr9/crawlquest/actions/workflows/test_core.yml)
+
 
 Lightweight wrapper around Python `requests` that automatically chooses between `GET` and `POST` based on the presence of a payload.  
 Perfect for **web scraping**, **automation**, and **crawling tools** where fast and adaptive request behavior is needed.
