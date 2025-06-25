@@ -18,6 +18,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.x"
+          
+      - name: Set PACKAGE_VERSION from GitHub Release
+        run: echo "PACKAGE_VERSION=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
 
       - name: Build release distributions
         run: |
@@ -42,9 +45,6 @@ jobs:
       name: pypi
 
     steps:
-      - name: Set PACKAGE_VERSION from GitHub Release
-        run: echo "PACKAGE_VERSION=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
-        
       - name: Retrieve release distributions
         uses: actions/download-artifact@v4
         with:
