@@ -10,7 +10,8 @@ def test_json_get():
 
 def test_json_post():
     payload = {"hello": "world"}
-    res = json("https://httpbin.org/post", payload=payload)
+    header = {"Content-Type": "application/json"}
+    res = json("https://httpbin.org/post", payload=payload, headers=header)
     assert res["json"] == payload
 
 

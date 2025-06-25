@@ -19,7 +19,11 @@ def _fetch(
     sess = session or requests.Session()
     try:
         if payload is not None:
-            response = sess.post(url, data=payload, headers=headers, timeout=timeout)
+            content_type = (headers or {}).get("Content-Type", "").lower()
+            if "application/json" in content_type:
+                response = sess.post(url, json=payload, headers=headers, timeout=timeout)
+            else:
+                response = sess.post(url, data=payload, headers=headers, timeout=timeout)
         else:
             response = sess.get(url, headers=headers, timeout=timeout)
         response.raise_for_status()
