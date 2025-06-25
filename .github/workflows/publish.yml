@@ -42,6 +42,9 @@ jobs:
       name: pypi
 
     steps:
+      - name: Set PACKAGE_VERSION from GitHub Release
+        run: echo "PACKAGE_VERSION=${{ github.event.release.tag_name }}" >> $GITHUB_ENV
+        
       - name: Retrieve release distributions
         uses: actions/download-artifact@v4
         with:
