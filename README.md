@@ -1,7 +1,7 @@
 # CrawlQuest
+[![Latest Release](https://img.shields.io/github/v/release/leewr9/crawlquest)](https://github.com/leewr9/crawlquest/releases)
 [![Test Status](https://github.com/leewr9/crawlquest/actions/workflows/test.yml/badge.svg)](https://github.com/leewr9/crawlquest/actions/workflows/test.yml)
 [![Publish Status](https://github.com/leewr9/crawlquest/actions/workflows/publish.yml/badge.svg)](https://github.com/leewr9/crawlquest/actions/workflows/publish.yml)
-
 
 Lightweight wrapper around Python `requests` that automatically chooses between `GET` and `POST` based on the presence of a payload.  
 Perfect for **web scraping**, **automation**, and **crawling tools** where fast and adaptive request behavior is needed.
